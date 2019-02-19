@@ -22,19 +22,18 @@ class App extends Component {
                 <InputLabel>Arttist Name: </InputLabel>
                 <SearchBox></SearchBox>
                 <InputLabel>Select year: </InputLabel>
-                <DateSelection type="date">
-                  <option>Grapefruit</option>
-                  <option>Lime</option>
-                  <option>Coconut</option>
-                  <option>Mango</option>                  
+                <DateSelection>               
                 </DateSelection>
                 <DefaultButton>Search</DefaultButton>
               </FlexibleLayout>
             </form>
+            <FlexibleLayout column>
+              <InputLabel>Results: </InputLabel>
+            </FlexibleLayout>
             <SongList>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
+              <li>Song 1</li>
+              <li>Song 2</li>
+              <li>Song 3</li>
             </SongList>
           </FlexibleLayout>
         </MainContainer>
