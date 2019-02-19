@@ -1,6 +1,6 @@
 Songs by
 
-<img align="center" src="./screenshot.png"/>
+<img align="center" src="src/screenshot.png"/>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
