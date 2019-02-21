@@ -11,6 +11,21 @@ import MainHeader from './components/mainHeader';
 import SongList from './components/songList';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      song: "",
+      years:[]
+    }
+  }
+
+  searchSong = (event) => {
+    this.setState({song: event.target.value});
+    console.log("Searching for: " + this.state.song);
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,15 +35,14 @@ class App extends Component {
             <form>
               <FlexibleLayout column>
                 <InputLabel>Arttist Name: </InputLabel>
-                <SearchBox></SearchBox>
+                <SearchBox value={this.state.song} onChange={this.searchSong}></SearchBox>
                 <InputLabel>Select year: </InputLabel>
-                <DateSelection>               
-                </DateSelection>
-                <DefaultButton>Search</DefaultButton>
+                <DateSelection type="date"></DateSelection>
+                <DefaultButton type="submit">Search</DefaultButton>
               </FlexibleLayout>
             </form>
             <FlexibleLayout column>
-              <InputLabel>Results: </InputLabel>
+              <InputLabel>Results for {this.state.song} </InputLabel>
             </FlexibleLayout>
             <SongList>
               <li>Song 1</li>
