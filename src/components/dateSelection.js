@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const DateSelection = styled.input`
+const DateSelection = styled.ul`
     border: none;
     margin: 10px 20px;
     font-size: 25px;
